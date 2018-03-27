@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Front End Developer",
+    "company": "Google",
+    "description": "Rebuild Google",
+    "location": "25 Massachusetts Ave NW #900, Washington, DC 20001",
+    "salary": "$10,000,000",
+    "status": "Offer"
+  },
+  {
+    "title": "Web Developer",
+    "company": "iStrategyLabs",
+    "description":
+      "You'll be leading the development of static, dynamic (Python/Django & WordPress), and single page applications. You might even build a mobile app using React Native. Every day will be different—you'll learn more than you ever though possible.",
+    "location": "641 S St NW, Fl 1, Washington, DC 20001",
+    "salary": "$30,000,000",
+    "status": "Offer"
+  }
+]
