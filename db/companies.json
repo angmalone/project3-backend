@@ -1,0 +1,16 @@
+[
+  {
+    "name": "The Washington Post",
+    "type": "Media",
+    "contactInfo": "(202) 334-6100",
+    "contactName": "Jeff Bezos",
+    "status": "Outreach Needed"
+  },
+  {
+    "name": "CHIEF",
+    "type": "Advertising",
+    "contactInfo": "(202) 791-0200",
+    "contactName": "Margaret Johnson",
+    "status": "Contact Made"
+  }
+]

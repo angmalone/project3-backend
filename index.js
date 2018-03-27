@@ -19,6 +19,16 @@ app.get("/api/jobs", (req, res) => {
     });
 });
 
+app.get("/api/jobs/:id", (req, res) => {
+  Job.findById(req.params.id)
+    .then(jobs => {
+      res.json(jobs);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 app.set("port", process.env.PORT || 3000);
 
 app.listen(app.get("port"), () => {
