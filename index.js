@@ -3,10 +3,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const methodOverride = require("method-override");
 const Job = require("./db/jobs.js");
-const Company = require("./db/companies.js");
 
 const app = express();
-//app.use(express.static(path.join(__dirname, "public")));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
