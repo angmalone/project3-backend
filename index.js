@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const methodOverride = require("method-override");
 const Job = require("./db/jobs.js");
+const Company = require("./db/companies.js");
 
 const app = express();
 
@@ -13,6 +14,16 @@ app.get("/api/jobs", (req, res) => {
   Job.find()
     .then(jobs => {
       res.json(jobs);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/api/companies", (req, res) => {
+  Company.find()
+    .then(companies => {
+      res.json(companies);
     })
     .catch(err => {
       console.log(err);
