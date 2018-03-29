@@ -41,10 +41,30 @@ app.post("/api/jobs", (req, res) => {
     });
 });
 
+app.post("/api/companies", (req, res) => {
+  Company.create(req.body)
+    .then(companies => {
+      res.json(companies);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 app.get("/api/jobs/:id", (req, res) => {
   Job.findById(req.params.id)
     .then(jobs => {
       res.json(jobs);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/api/companies/:id", (req, res) => {
+  Company.findById(req.params.id)
+    .then(companies => {
+      res.json(companies);
     })
     .catch(err => {
       console.log(err);
