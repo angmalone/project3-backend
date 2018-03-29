@@ -6,7 +6,7 @@ const Job = require("./db/jobs.js");
 const Company = require("./db/companies.js");
 
 const app = express();
-
+app.use(bodyParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(cors());
@@ -32,6 +32,7 @@ app.get("/api/companies", (req, res) => {
 });
 
 app.post("/api/jobs", (req, res) => {
+  console.log(req.body);
   Job.create(req.body)
     .then(jobs => {
       res.json(jobs);
