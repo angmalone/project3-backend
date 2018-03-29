@@ -80,6 +80,26 @@ app.delete("/api/companies/:id", (req, res) => {
   Company.findOneAndRemove({ _id: req.params.id }).then(() => {});
 });
 
+app.get("/api/jobs/edit/:id", (req, res) => {
+  Job.findOne({ _id: req.params.id }).then({});
+});
+
+app.put("/api/jobs/:id", (req, res) => {
+  Job.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }).then(
+    {}
+  );
+});
+
+app.get("/api/companies/edit/:id", (req, res) => {
+  Company.findOne({ _id: req.params.id }).then({});
+});
+
+app.put("/api/companies/:id", (req, res) => {
+  Company.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true
+  }).then({});
+});
+
 app.set("port", process.env.PORT || 3001);
 
 app.listen(app.get("port"), () => {
