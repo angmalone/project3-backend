@@ -72,15 +72,11 @@ app.get("/api/companies/:id", (req, res) => {
 });
 
 app.delete("/api/jobs/:id", (req, res) => {
-  Job.findOneAndRemove({ _id: req.params.id }).then(() => {
-    res.redirect("/");
-  });
+  Job.findOneAndRemove({ _id: req.params.id }).then(() => {});
 });
 
 app.delete("/api/companies/:id", (req, res) => {
-  Company.findOneAndRemove({ _id: req.params.id }).then(() => {
-    res.redirect("/");
-  });
+  Company.findOneAndRemove({ _id: req.params.id }).then(() => {});
 });
 
 app.set("port", process.env.PORT || 3001);
