@@ -97,7 +97,7 @@ app.get("/api/companies/edit/:id", (req, res) => {
 app.put("/api/companies/:id", (req, res) => {
   Company.findOneAndUpdate({ _id: req.params.id }, req.body, {
     new: true
-  }).then({});
+  }).then(company => res.json(company));
 });
 
 app.set("port", process.env.PORT || 3001);
