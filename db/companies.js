@@ -1,11 +1,26 @@
 const mongoose = require("../db/connection");
 
 const CompanySchema = new mongoose.Schema({
-  name: String,
-  type: String,
-  contactInfo: String,
-  contactName: String,
-  status: String
+  name: {
+    type: String,
+    required: true
+  },
+  type: {
+    type: String,
+    required: true
+  },
+  contactInfo: {
+    type: String,
+    required: true
+  },
+  contactName: {
+    type: String,
+    required: true
+  },
+  status: {
+    type: String,
+    required: true
+  }
 });
 
 const Company = mongoose.model("Company", CompanySchema);
