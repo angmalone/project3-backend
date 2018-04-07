@@ -11,11 +11,11 @@
 1.  Created the `Job` and `Company` models
 2.  Generated seed data
 3.  Defined routes
-4.  Changed routes to controllers
+4.  Moved routers into controllers
 
 ## Features
 
-* Nothing super fancy or out of the ordinary is included, the backend was created to allow full CRUD functionality.
+* Nothing super fancy or out of the ordinary is included, the backend was created to allow for full CRUD functionality.
 
 ## Installation Instructions
 

@@ -14,8 +14,8 @@ app.use(cors());
 const jobController = require("./controllers/jobs");
 const companyController = require("./controllers/companies");
 
-app.use("/jobs", jobController);
-app.use("/companies", companyController);
+app.use("/api/jobs", jobController);
+app.use("/api/companies", companyController);
 
 app.get("/api", (req, res) => {
   res.send("connected");
