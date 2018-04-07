@@ -27,6 +27,10 @@ const JobSchema = new mongoose.Schema({
   }
 });
 
+//https://stackoverflow.com/questions/19762430/make-all-fields-required-in-mongoose
+//var required = ['title', 'company', 'description', 'location', 'salary', 'status']
+//for (attr in required) { schema[attr].required = true; }
+
 const Job = mongoose.model("Job", JobSchema);
 
 module.exports = Job;

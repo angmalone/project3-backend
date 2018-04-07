@@ -17,17 +17,9 @@ const companyController = require("./controllers/companies");
 app.use("/jobs", jobController);
 app.use("/companies", companyController);
 
-/*app.get("/api/jobs/", (req, res) => {
-  Job.find({}).then(jobs => {
-    res.render({ jobs });
-  });
+app.get("/api", (req, res) => {
+  res.send("connected");
 });
-
-app.get("/api/companies", (req, res) => {
-  Company.find({}).then(companies => {
-    res.render({ companies});
-  });
-});*/
 
 app.set("port", process.env.PORT || 3001);
 

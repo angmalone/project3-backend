@@ -23,6 +23,10 @@ const CompanySchema = new mongoose.Schema({
   }
 });
 
+//https://stackoverflow.com/questions/19762430/make-all-fields-required-in-mongoose
+//var required = ['name', 'type', 'contactInfo', 'contactName', 'status']
+//for (attr in required) { schema[attr].required = true; }
+
 const Company = mongoose.model("Company", CompanySchema);
 
 module.exports = Company;
